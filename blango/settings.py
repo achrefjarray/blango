@@ -53,9 +53,11 @@ class Dev(Configuration):
       'blog',
       "crispy_forms",
       "crispy_bootstrap5",
+      "debug_toolbar",
   ]
 
   MIDDLEWARE = [
+      'debug_toolbar.middleware.DebugToolbarMiddleware',
       'django.middleware.security.SecurityMiddleware',
       'django.contrib.sessions.middleware.SessionMiddleware',
       'django.middleware.common.CommonMiddleware',
@@ -193,3 +195,4 @@ class Prod(Dev):
       'django.contrib.auth.hashers.Argon2PasswordHasher',
       'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
     ]
+    INTERNAL_IPS = ["192.168.11.179"]
