@@ -8,6 +8,9 @@
         {% if user.is_authenticated %}
         <p>Your account doesn't have access to this page. To proceed,
         please login with an account that has access.</p>
+        <p>
+            <a href="{% url "google_login" %}">Log in with Google</a>
+        </p>
         {% else %}
         <p>Please login to see this page.</p>
         {% endif %}
