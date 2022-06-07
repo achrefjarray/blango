@@ -59,6 +59,7 @@ class Dev(Configuration):
       "crispy_bootstrap5",
       "debug_toolbar",
       "allauth", 
+      "rest_framework",
       "allauth.account", 
       "allauth.socialaccount",
       "allauth.socialaccount.providers.google"
