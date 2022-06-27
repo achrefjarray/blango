@@ -62,7 +62,8 @@ class Dev(Configuration):
       "rest_framework",
       "allauth.account", 
       "allauth.socialaccount",
-      "allauth.socialaccount.providers.google"
+      "allauth.socialaccount.providers.google",
+      "versatileimagefield"
   ]
 
   MIDDLEWARE = [
@@ -147,6 +148,8 @@ class Dev(Configuration):
   # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
   STATIC_URL = '/static/'
+  MEDIA_ROOT = BASE_DIR / "media"
+  MEDIA_URL = "/media/"
 
   # Default primary key field type
   # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -209,7 +212,7 @@ class Prod(Dev):
     ACCOUNT_EMAIL_REQUIRED = True
     ACCOUNT_USERNAME_REQUIRED = False
     ACCOUNT_AUTHENTICATION_METHOD = "email"
-
+    
     REST_FRAMEWORK = {
       "DEFAULT_AUTHENTICATION_CLASSES": [
           "rest_framework.authentication.BasicAuthentication",

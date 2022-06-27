@@ -27,5 +27,13 @@
         {% endcol %}
     {% endrow %}
 {% endif %}
+    {% row %}
+        {% col %}
+        <p>herre</p>
+        {% endcol %}
+        {% col %}
+            <img class="img-fluid" src="{{ post.hero_image.url }}">
+        {% endcol %}
+    {% endrow %}
 {% include "blog/post-comments.html" %}
 {% endblock %}
